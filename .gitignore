@@ -103,5 +103,3 @@ ENV/
 *.bak
 
 *.sqlite3
-
-*.DS_Store
