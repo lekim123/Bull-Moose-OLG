@@ -104,4 +104,4 @@ ENV/
 
 *.sqlite3
 
-*._DS_Store
+*.DS_Store
