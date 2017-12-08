@@ -3,3 +3,4 @@ dj-database-url==0.4.2
 gunicorn==19.7.1
 psycopg2==2.6.2
 whitenose==3.2.2
+wheel==0.30.0
