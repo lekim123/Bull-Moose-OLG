@@ -1,1 +1,1 @@
-web: gunicorn leonard.wsgi --log-file
+web: gunicorn Leonard.wsgi --log-file
