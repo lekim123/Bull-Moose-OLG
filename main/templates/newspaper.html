@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Newspapers - Leo's Newspaper Corner{% endblock %}
+{% block title %}{{newspaper.name}} Newspaper{% endblock %}
 
 {% block navbar %}
    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -21,18 +21,15 @@
     </nav>
 {% endblock %}
 {% block content %}
-      {% for newspaper in newspapers %}
+      {% for article in articles %}
         <div class="row">
-               {% for n in newspaper %}
+            {% for a in article %}
                 <div class="col-md-4" style="border: 1px solid black;">
-                    <h1><a href="{{n.pk}}/">{{ n.name }}</a></h1>
-                    <hr>
-                    {% with n.get_latest_post as latest %}
-                        <h3>{{ latest.name }}</h3>
-                        <i>{{ latest.datePosted }}</i>
-                    {% endwith %}
+                    <h1><a href="{{a.pk}}/">{{ a.name }}</a></h1>
+                    <p>{{a.summary}}</p>
                 </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
       {% endfor %}
+        <a href="../">Back to Newspapers</a>
 {% endblock %}

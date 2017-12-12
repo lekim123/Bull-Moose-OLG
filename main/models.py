@@ -30,6 +30,31 @@ class Newspaper(models.Model):
     def latest(self):
         return self.articles.order_by('-datePosted')
     
+    def sort_articles(self):
+        s = []
+        i = []
+        idx = 0
+        for n in self.latest():
+            if idx == 3:
+                s.append(i)
+                break
+            i.append(n)
+            idx += 1
+        return s
+    
     def __str__(self):
         return self.name
+    
+    @static_method
+    def sort_self():
+        s = []
+        i = []
+        idx = 0
+        for n in Newspaper.objects.all():
+            if idx == 3:
+                s.append(i)
+                break
+            i.append(n)
+            idx += 1
+        return s
     

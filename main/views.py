@@ -28,10 +28,10 @@ def campaign(request):
     return render(request, 'campaign.html')
 
 def newspapers(request):
-    return render(request, 'news.html', {'newspapers': Newspaper.objects.all()})
+    return render(request, 'news.html', {'newspapers': Newspaper.sort_self()})
 
 def newspaper(request, nid=0):
-    return render(request, 'newspaper.html', {'newspaper': Newspaper.objects.get(pk=nid)})
+    return render(request, 'newspaper.html', {'articles': Newspaper.objects.get(pk=nid).sort_articles()})
 
 def article(request, nid=0, aid=0):
     n = Newspaper.objects.get(pk=nid)
