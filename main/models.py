@@ -45,7 +45,7 @@ class Newspaper(models.Model):
     def __str__(self):
         return self.name
     
-    @static_method
+    @staticmethod
     def sort_self():
         s = []
         i = []
