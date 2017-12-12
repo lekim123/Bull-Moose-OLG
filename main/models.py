@@ -37,7 +37,9 @@ class Newspaper(models.Model):
         for n in self.latest():
             if idx == 3:
                 s.append(i)
-                break
+                i = []
+                idx = 0
+                continue
             i.append(n)
             idx += 1
         return s
@@ -53,8 +55,9 @@ class Newspaper(models.Model):
         for n in Newspaper.objects.all():
             if idx == 3:
                 s.append(i)
-                break
+                i = []
+                idx = 0
+                continue
             i.append(n)
             idx += 1
-        return s
     
