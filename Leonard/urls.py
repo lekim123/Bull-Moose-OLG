@@ -25,7 +25,6 @@ urlpatterns = [
     url(r'^bio/$', bio, name='bio'),
     url(r'^ask/$', ask, name='ask'),
     url(r'^campaign/$', campaign, name='campaign'),
-    url(r'^news/$', news, name='news'),
     url(r'^news/$', newspapers, name='newspapers'),
     url(r'^news/(?P<nid>[\-\d\w]+)/$', newspaper, name='newspaper'),
     url(r'^news/(?P<nid>[\-\d\w]+)/(?P<aid>[\-\d\w]+)/$', article, name='article'),
