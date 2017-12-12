@@ -20,7 +20,7 @@ def ask(request):
     if form.is_valid():
         save_it = form.save(commit=False)
         save_it.save()
-        messages.success(request, 'Your question has been recorded. You should recieve an email from Leo with the answer. Thank you!')
+        messages.success(request, 'Your question has been recorded. You should recieve an email from The Llama Party with the answer. Thank you!')
         return HttpResponseRedirect('/')
     
     return render(request, 'ask.html', {'form': form})
