@@ -25,9 +25,3 @@ class Newspaper(models.Model):
     def __str__(self):
         return self.name
     
-class IPAddress(models.Model):
-    ip = models.GenericIPAddressField()
-    
-    def __str__(self):
-        return self.ip + " is let into the admin site."
-    
