@@ -39,7 +39,6 @@ class Newspaper(models.Model):
                 s.append(i)
                 i = []
                 idx = 0
-                continue
             i.append(n)
             idx += 1
         return s
@@ -57,7 +56,7 @@ class Newspaper(models.Model):
                 s.append(i)
                 i = []
                 idx = 0
-                continue
             i.append(n)
             idx += 1
+        return s
     
