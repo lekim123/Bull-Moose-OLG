@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from main.views import ask, bio, home, learnmore, news
+from main.views import *
 
 admin.site.site_header = 'Llama Party Administration'
 admin.site.site_title = 'Llama Party Administration'
@@ -26,5 +26,8 @@ urlpatterns = [
     url(r'^ask/$', ask, name='ask'),
     url(r'^campaign/$', learnmore, name='campaign'),
     url(r'^news/$', news, name='news'),
+    url(r'^news/$', newspapers, name='newspapers'),
+    url(r'^news/(?P<nid>[\-\d\w]+)/$', newspaper, name='newspaper'),
+    url(r'^news/(?P<nid>[\-\d\w]+)/(?P<aid>[\-\d\w]+)/$', article, name='article'),
     url(r'^admin/', admin.site.urls),
 ]

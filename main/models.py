@@ -13,7 +13,9 @@ class Question(models.Model):
     
 class Article(models.Model):
     name = models.CharField(max_length=50, blank=False)
-    text = models.TextField(max_length=2500, blank=False)
+    summary = models.TextField(max_length=500, blank=False)
+    text = models.TextField(max_length=5000, blank=False)
+    datePosted = models.DateTimeField(auto_now=True, auto_now_add=False)
     
     def __str__(self):
         return self.name
@@ -21,6 +23,12 @@ class Article(models.Model):
 class Newspaper(models.Model):
     name = models.CharField(max_length=50, blank=False)
     articles = models.ManyToManyField(Article)
+    
+    def get_latest_post(self):
+        return self.articles.all().latest('datePosted')
+    
+    def latest(self):
+        return self.articles.order_by('-datePosted')
     
     def __str__(self):
         return self.name

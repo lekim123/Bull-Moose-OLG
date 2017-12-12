@@ -12,14 +12,14 @@ class QuestionAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 
-class ArticleAdmin(admin.ModelAdmin):
-    class Meta:
-        model = Article
-        
-admin.site.register(Article, ArticleAdmin)
-
 class NewspaperAdmin(admin.ModelAdmin):
     class Meta:
         model = Newspaper
 
 admin.site.register(Newspaper, NewspaperAdmin)
+
+class ArticleAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Article
+
+admin.site.register(Article, ArticleAdmin)
