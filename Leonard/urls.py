@@ -17,6 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 from main.views import ask, bio, home, learnmore, news
 
+admin.site.site_header = 'Llama Party Administration'
+admin.site.site_title = 'Llama Party Administration'
+
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^bio/$', bio, name='bio'),
