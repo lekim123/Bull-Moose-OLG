@@ -27,6 +27,7 @@
                 <div class="col-md-4" style="border: 1px solid black;">
                     <h1><a href="{{a.pk}}/">{{ a.name }}</a></h1>
                     <p>{{a.summary}}</p>
+                    <i>Published on {{ a.datePosted }}</i>
                 </div>
             {% endfor %}
         </div>

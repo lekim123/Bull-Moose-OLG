@@ -28,8 +28,9 @@
                     <h1><a href="{{n.pk}}/">{{ n.name }}</a></h1>
                     <hr>
                     {% with n.get_latest_post as latest %}
+                        <h3>Latest Article:</h3>
                         <h3>{{ latest.name }}</h3>
-                        <i>{{ latest.datePosted }}</i>
+                        <i>Published on {{ latest.datePosted }}</i>
                     {% endwith %}
                 </div>
                 {% endfor %}

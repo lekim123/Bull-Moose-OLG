@@ -22,6 +22,8 @@
 {% endblock %}
 {% block content %}
         <h1>{{article.name}}</h1>
+        <i>Published on {{article.datePosted}}</i>
+        <hr>
         <p>{{article.text}}</p>
         <a href="../">Back to {{newspaper.name}}</a>
 {% endblock %}
