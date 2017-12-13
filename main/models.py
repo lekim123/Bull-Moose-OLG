@@ -41,6 +41,7 @@ class Newspaper(models.Model):
                 idx = 0
             i.append(n)
             idx += 1
+        s.append(i)
         return s
     
     def __str__(self):
@@ -58,5 +59,6 @@ class Newspaper(models.Model):
                 idx = 0
             i.append(n)
             idx += 1
+        s.append(i)
         return s
     
