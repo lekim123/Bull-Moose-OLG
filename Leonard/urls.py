@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from main.views import *
+from main.views import article, ask, bio, campaign, home, newspaper, newspapers
 
 admin.site.site_header = 'Llama Party Administration'
 admin.site.site_title = 'Llama Party Administration'

@@ -25,7 +25,7 @@ def ask(request):
     return render(request, 'ask.html', {'form': form})
 
 def campaign(request):
-    return render(request, 'campaign.html')
+    return render(request, 'campaigninfo.html')
 
 def newspapers(request):
     return render(request, 'news.html', {'newspapers': Newspaper.sort_self()})
