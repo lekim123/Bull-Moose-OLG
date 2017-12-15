@@ -12,16 +12,16 @@ class Question(models.Model):
         return self.name
     
 class Article(models.Model):
-    name = models.CharField(max_length=50, blank=False)
+    name = models.CharField(max_length=40, blank=False)
     summary = models.TextField(max_length=500, blank=False)
     text = models.TextField(max_length=5000, blank=False)
-    datePosted = models.DateTimeField(auto_now=True, auto_now_add=False)
+    datePosted = models.DateTimeField(auto_now=False, auto_now_add=True)
     
     def __str__(self):
         return self.name
     
 class Newspaper(models.Model):
-    name = models.CharField(max_length=50, blank=False)
+    name = models.CharField(max_length=40, blank=False)
     articles = models.ManyToManyField(Article)
     
     def get_latest_post(self):
