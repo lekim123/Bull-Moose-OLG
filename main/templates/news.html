@@ -21,14 +21,6 @@
     </nav>
 {% endblock %}
 {% block content %}
-      <div class="row">
-         <div class="col-xs-3"><h1>Listen to Literary Discussion:</h1></div>
-         <div class="col-xs-9">
-            <audio controls>
-               <source src="/static/literary-discussion.mp3" type="audio/mpeg" />
-            </audio>
-         </div>
-      </div>
       {% for newspaper in newspapers %}
         <div class="row">
                {% for n in newspaper %}
@@ -44,4 +36,12 @@
                 {% endfor %}
             </div>
       {% endfor %}
+      <div class="row">
+         <div class="col-xs-9"><h1>Listen to Literary Discussion:    </h1></div>
+         <div class="col-xs-3">
+            <audio controls>
+               <source src="/static/literary-discussion.mp3" type="audio/mpeg" />
+            </audio>
+         </div>
+      </div>
 {% endblock %}
