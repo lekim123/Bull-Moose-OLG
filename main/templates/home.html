@@ -16,6 +16,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'bio' %}">Biography</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/game/">Play Candidate Catcher</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -35,20 +38,25 @@
 <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Student Newspaper</h2>
           <p>Some Llama Party members run a student newspaper!</p>
           <p><a class="btn btn-secondary" href="{% url 'newspapers' %}" role="button">See newspaper »</a></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Ask A Question</h2>
           <p>If you have a question for us, ask it here!</p>
           <p><a class="btn btn-secondary" href="{% url 'ask' %}" role="button">Ask Question »</a></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h2>Candidates</h2>
-          <p>Learn more about the canidates like Leo Ogle, Jackie Comerford, Alanna Halloran, and Miguel Nunez Mudoy</p>
+          <p>Learn more about the canidates like Leo Ogle, Jackie Comerford, and Miguel Nunez Mudoy</p>
           <p><a class="btn btn-secondary" href="{% url 'campaign' %}" role="button">View details »</a></p>
+        </div>
+        <div class="col-md-3">
+         <h2>Candidate Catcher</h2>
+         <p>Play the fun game called Candidate Catcher!</p>
+         <p><a href="btn btn-secondary" href="/game/" role="button">Play Game >></a></p>
         </div>
       </div>
 
