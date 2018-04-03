@@ -36,3 +36,6 @@ def newspaper(request, nid=0):
 def article(request, nid=0, aid=0):
     n = Newspaper.objects.get(pk=nid)
     return render(request, 'article.html', {'newspaper': n, 'article': n.articles.get(pk=aid)})
+
+def game(request):
+    return render(request, 'game.html')
